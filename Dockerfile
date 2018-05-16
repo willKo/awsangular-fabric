@@ -1,5 +1,6 @@
 FROM mlaurie/aws-angular-builder:latest
 
+RUN apt-get update
 RUN apt-get install -y default-jre  --fix-missing
 RUN npm install -g canvas
 RUN npm install -g node-gyp 
