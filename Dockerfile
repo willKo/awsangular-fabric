@@ -1,5 +1,6 @@
 FROM mlaurie/aws-angular-builder:latest
 
+RUN sudo apt-get install -y default-jre
 RUN npm install -g canvas
 RUN npm install -g node-gyp 
 RUN npm install -g fabric@1.7.14
