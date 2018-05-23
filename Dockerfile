@@ -4,6 +4,10 @@ RUN apt-get update
 # install java  
 RUN apt-get install -y default-jre  --fix-missing
 RUN echo "EXPORT JAVA_HOME=/usr/lib/jvm/default-java">>~/.bashrc
+RUN echo "EXPORT PATH=$JAVA_HOME/bin:$PATH">>~/.bashrc
+RUN setenv JAVA_HOME /usr/lib/jvm/default-java
+RUN which java 
+RUN java -version
 RUN apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev -y
 RUN npm install -g canvas@1.6.10
 RUN npm install -g node-gyp@3.6.2
