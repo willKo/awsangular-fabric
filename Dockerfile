@@ -3,7 +3,7 @@ FROM mlaurie/aws-angular-builder:1.4.5
 RUN apt-get update
 # install java  
 RUN apt-get install -y default-jre  --fix-missing
-ENV JAVA_HOME=/usr/lib/jvm/default-java
+ENV JAVA_HOME /usr/bin/java
 RUN which java 
 RUN java -version
 RUN apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev -y
