@@ -2,7 +2,7 @@ FROM mlaurie/aws-angular-builder:1.4.5
 
 RUN apt-get update
 # install java  
-RUN apt-get install -y openjdk-7-jre  --fix-missing
+RUN apt-get install -y openjdk-8-jre  --fix-missing
 RUN which java
 ENV JAVA_HOME /usr/
 RUN java -version
